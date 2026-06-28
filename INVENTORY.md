@@ -2,6 +2,14 @@
 
 This is the authoritative list of all BBWAAS-related directories discovered under /mnt/c/Users/Sagou (exhaustive find).
 
+## Git Repository
+
+- **URL:** https://github.com/Oc2cO/bbwaas
+- **Branch:** main
+- **Clone:** `git clone https://github.com/Oc2cO/bbwaas.git`
+
+All new agent saves should target the BBWAAS/ umbrella. This repo IS the canonical source for agents that cannot access local files. The local BrainHub has additional content (symlinked folders, historical archives) but the BBWAAS/ structure is the single entry point.
+
 ## Canonical / Active Umbrella
 - /mnt/c/Users/Sagou/Documents/BrainHub/BBWAAS/   <--- NEW SINGLE ENTRY POINT
   - AGENT_WORKSPACE -> ../00_MASTER_FRONT_DOOR/AGENT_WORKSPACE (primary shared registry)

@@ -67,6 +67,15 @@ This is the **canonical master root** for all BBWAAS agent memory, packets, repo
   - TOOL_SANDBOXES/ , USER_ROOT_MCP/ , etc.
 - ARCHIVE_GATHERS/ , STALE_BBWAAS/ (external for historical/stale)
 
+## Git Repository
+
+- **URL:** https://github.com/Oc2cO/bbwaas
+- **Branch:** main
+- **Clone:** `git clone https://github.com/Oc2cO/bbwaas.git`
+- **Pushed:** 2026-06-28
+
+All agents: clone this repo to get the complete BBWAAS structure. Local symlinks (AGENT_WORKSPACE/, EVOLUTION/, etc.) are not tracked in git — they only work on the local BrainHub. Use the real directories under App_Store_Apps/, Website/, Agent_Systems/, Other_Projects/, and Work_Packets/ instead.
+
 ## Save Format Used
 - Grandparent master (BBWAAS) > parent branches (App_Store_Apps, Website, Agent_Systems, Other_Projects) > child subs (MemTool, oc2co, Visual_Intake, Packets...) > standardized grandchildren (Images/, Source/, Documents/, References/, Assets/, Code/...)
 - Consistent folder labels: no creative names; use "Documents", "Source", "Assets", "Images" (with subcats), "Packets", "Reports"
