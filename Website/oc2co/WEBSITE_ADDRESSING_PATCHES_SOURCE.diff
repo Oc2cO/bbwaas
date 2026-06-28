@@ -1,0 +1,329 @@
+diff --git a/agw/AGENT_WORKSPACE/PACKETS/BBWAAS_GROK_CONDENSE_TOKEN_SAVE_2026-06-27.md b/agw/AGENT_WORKSPACE/PACKETS/BBWAAS_GROK_CONDENSE_TOKEN_SAVE_2026-06-27.md
+index 4be249f..ff626df 100644
+--- a/agw/AGENT_WORKSPACE/PACKETS/BBWAAS_GROK_CONDENSE_TOKEN_SAVE_2026-06-27.md
++++ b/agw/AGENT_WORKSPACE/PACKETS/BBWAAS_GROK_CONDENSE_TOKEN_SAVE_2026-06-27.md
+@@ -13,7 +13,7 @@
+ 
+ ## Condensed Project State (token-optimized)
+ - **Website (oc2co):** V2B ocean-night + celestial (planet, moons, constel, biolum waves). Static skeleton complete: index + store/arcade/checkout(bridge)/success/cancel. Nav fixed to Polsia URLs. Video src corrected. Visibility (z-index, sizes) repaired.
+-- **Routing/Safety:** All functional links point to https://oc2coos-2.polsia.app. Bridge-only checkout. No secrets. No deploy.
++- **Routing/Safety:** All functional links now relative (store/, arcade/ etc.) to canonical www.oc2co.com . Bridge-only checkout. No secrets. No deploy. (Polsia legacy removed)
+ - **Branch:** feat/oc2co-static-route-skeleton-01 (feature, not main).
+ - **Assets:** Pipeline defined (canva_exports/curated → oc2co_website/assets). Awaiting user images.
+ - **MemTool:** Existing visual upgrade packet (GROK512K2). Atrium/3D + Memora/Oc2cO/Sagous refs. Research lane parked.
+diff --git a/agw/AGENT_WORKSPACE/README.md b/agw/AGENT_WORKSPACE/README.md
+index d9fafeb..7a7d917 100644
+--- a/agw/AGENT_WORKSPACE/README.md
++++ b/agw/AGENT_WORKSPACE/README.md
+@@ -1,6 +1,10 @@
+-# AGENT WORKSPACE — Shared Multi-Agent Registry
++# AGENT WORKSPACE — Shared Multi-Agent Registry (SNAPSHOT COPY in agw/AGENT_WORKSPACE)
+ 
+-Every agent writes here first. Not into random folders.
++**BG5 BRIDGE NOTE:** Snapshot only. Canonical primary: BBWAAS/AGENT_WORKSPACE -> 00_MASTER_FRONT_DOOR/AGENT_WORKSPACE .
++Use BBWAAS_MASTER_LINK or go up to canonical for writes. Do not branch new packets here; feed to primary.
++See master BBWAAS/ + Source/oc2co_website/README for single truth.
++
++Every agent writes here first. Not into random folders. (use canonical)
+ 
+ ## Structure
+ 
+diff --git a/agw/README.md b/agw/README.md
+index d9fafeb..450f58a 100644
+--- a/agw/README.md
++++ b/agw/README.md
+@@ -1,6 +1,12 @@
+-# AGENT WORKSPACE — Shared Multi-Agent Registry
++# AGENT WORKSPACE — Shared Multi-Agent Registry (SNAPSHOT in agw/)
+ 
+-Every agent writes here first. Not into random folders.
++**BG5 BRIDGE NOTE:** This is a *snapshot* copy inside canonical Website Source (oc2co_website/). 
++Primary live AGENT_WORKSPACE: /BBWAAS/AGENT_WORKSPACE (symlinked to 00_MASTER_FRONT_DOOR/AGENT_WORKSPACE).
++Always write to canonical first (via BBWAAS/ or 00_MASTER_FRONT_DOOR/AGENT_WORKSPACE/PACKETS/).
++This agw/ copy + BBWAAS_MASTER_LINK is for project-local reference/snapshot only.
++See BBWAAS/README.md and INVENTORY.md for canonical org.
++
++Every agent writes here first. Not into random folders. (redirect to canonical)
+ 
+ ## Structure
+ 
+diff --git a/arcade/index.html b/arcade/index.html
+index 6f41684..eec3ac4 100644
+--- a/arcade/index.html
++++ b/arcade/index.html
+@@ -8,9 +8,9 @@
+ </head>
+ <body>
+   <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+-    <a href="https://www.oc2co.com" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+-    <a href="https://oc2coos-2.polsia.app/store" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
+-    <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Arcade</a>
++    <a href="../" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
++    <a href="../store/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
++    <a href="../arcade/" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Arcade</a>
+     <a href="https://www.oc2co.com#projects" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Projects</a>
+     <a href="https://www.oc2co.com#connect" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Connect</a>
+   </nav>
+diff --git a/cancel/index.html b/cancel/index.html
+index 8551cad..a799bd2 100644
+--- a/cancel/index.html
++++ b/cancel/index.html
+@@ -8,17 +8,17 @@
+ </head>
+ <body>
+   <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+-    <a href="https://www.oc2co.com" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+-    <a href="https://oc2coos-2.polsia.app/store" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
+-    <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
++    <a href="../" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
++    <a href="../store/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
++    <a href="../arcade/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
+   </nav>
+ 
+   <div style="max-width:640px;margin:80px auto;padding:0 20px;text-align:center;">
+     <h1>Checkout canceled</h1>
+     <p style="margin:24px 0;color:var(--text-dim);">Checkout was canceled or not completed. You can return to the store anytime.</p>
+     <p>
+-      <a href="https://oc2coos-2.polsia.app/store" style="display:inline-block;padding:12px 28px;background:var(--grad-cyan);color:#05070f;border-radius:999px;text-decoration:none;font-weight:600;">Back to Store</a>
+-      <a href="https://www.oc2co.com" style="margin-left:12px;display:inline-block;padding:12px 28px;border:1px solid var(--border);border-radius:999px;text-decoration:none;">Home</a>
++      <a href="../store/" style="display:inline-block;padding:12px 28px;background:var(--grad-cyan);color:#05070f;border-radius:999px;text-decoration:none;font-weight:600;">Back to Store</a>
++      <a href="../" style="margin-left:12px;display:inline-block;padding:12px 28px;border:1px solid var(--border);border-radius:999px;text-decoration:none;">Home</a>
+     </p>
+   </div>
+ 
+diff --git a/checkout.html b/checkout.html
+index 517b725..96f43bd 100644
+--- a/checkout.html
++++ b/checkout.html
+@@ -51,9 +51,9 @@
+ <body>
+   <!-- Consistent nav for checkout (Home / Store / Arcade as required) -->
+   <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+-    <a href="https://www.oc2co.com" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+-    <a href="https://oc2coos-2.polsia.app/store" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
+-    <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
++    <a href="./" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
++    <a href="store/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
++    <a href="arcade/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
+     <span style="color:var(--text-faint);margin:0 8px;">|</span>
+     <span style="color:var(--cyan);margin:0 12px;font-weight:600;">Checkout</span>
+   </nav>
+@@ -66,7 +66,7 @@
+     <!-- Future: background-image: url('assets/visuals/OC2CO_....png'); -->
+   </div>
+ 
+-  <a href="https://www.oc2co.com" style="position:relative; z-index:10; display:inline-block; margin:20px; padding:8px 16px; background:var(--surface2); border:1px solid var(--border); border-radius:999px; color:var(--cyan); font-size:0.85rem; text-decoration:none; font-weight:600;">← Home (Oc2cO)</a>
++  <a href="./" style="position:relative; z-index:10; display:inline-block; margin:20px; padding:8px 16px; background:var(--surface2); border:1px solid var(--border); border-radius:999px; color:var(--cyan); font-size:0.85rem; text-decoration:none; font-weight:600;">← Home (Oc2cO)</a>
+ 
+   <header class="checkout-header">
+     <div class="logo">Oc2cO</div>
+@@ -142,7 +142,7 @@
+       // Your server maps it to a Stripe Price ID (see PRICE_MAP).
+       var BACKEND_BASE = '';
+ 
+-      // Support funnel from apps: ?product=memtool_pro&return_to=https://memtool.oc2co.com/app
++      // Support funnel from apps: ?product=memtool_pro&return_to=https://memtool.oc2co.com/app  (update subdomain refs as registered)
+       const urlParams = new URLSearchParams(window.location.search);
+       const funnelProduct = urlParams.get('product');
+       const returnTo = urlParams.get('return_to');
+diff --git a/checkout/index.html b/checkout/index.html
+index d9da441..c88d958 100644
+--- a/checkout/index.html
++++ b/checkout/index.html
+@@ -16,9 +16,9 @@
+   <div class="checkout-bg-layer"></div>
+ 
+   <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+-    <a href="https://www.oc2co.com" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+-    <a href="https://oc2coos-2.polsia.app/store" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
+-    <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
++    <a href="../" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
++    <a href="../store/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
++    <a href="../arcade/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
+   </nav>
+ 
+   <a href="../" style="position:relative;z-index:10;display:inline-block;margin:20px;padding:8px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:999px;color:var(--cyan);font-size:0.85rem;text-decoration:none;font-weight:600;">← Home (Oc2cO)</a>
+@@ -37,7 +37,7 @@
+ 
+   <div class="checkout-footer-layer">
+     <p>Oc2cO • Secure • Private • Intentional</p>
+-    <p style="margin-top:8px;"><a href="https://oc2coos-2.polsia.app/store">Back to Store</a> • <a href="https://www.oc2co.com">Home</a></p>
++    <p style="margin-top:8px;"><a href="../store/">Back to Store</a> • <a href="../">Home</a></p>
+   </div>
+ </body>
+ </html>
+\ No newline at end of file
+diff --git a/cinematic/index.html b/cinematic/index.html
+index 3db9c0d..1ec5832 100644
+--- a/cinematic/index.html
++++ b/cinematic/index.html
+@@ -160,7 +160,7 @@
+       <div class="video-label">BRAND FILM • 2026</div>
+       <video id="cinematic-video" muted playsinline preload="metadata" style="width:100%; display:block;">
+         <!-- Using one of your brand animation clips -->
+-        <source src="../oc2co_intro.mp4" type="video/mp4">
++        <source src="../oc2co_intro_silent.mp4" type="video/mp4">
+       </video>
+     </div>
+     <div class="scroll-hint">SCROLL TO PLAY THE FILM</div>
+@@ -244,7 +244,7 @@
+   </div>
+ 
+   <div class="cinematic-footer">
+-    Oc2cO · Built with the Cinematic Website Skill · <a href="https://www.oc2co.com" style="color:var(--cyan);font-weight:600;">Home</a> | <a href="https://oc2coos-2.polsia.app/checkout" style="color:var(--text2)">Checkout</a> | <a href="https://oc2coos-2.polsia.app/store" style="color:var(--text2)">Store</a> | <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--text2)">Arcade</a>
++    Oc2cO · Built with the Cinematic Website Skill · <a href="../" style="color:var(--cyan);font-weight:600;">Home</a> | <a href="../checkout/" style="color:var(--text2)">Checkout</a> | <a href="../store/" style="color:var(--text2)">Store</a> | <a href="../arcade/" style="color:var(--text2)">Arcade</a>
+   </div>
+ 
+   <script>
+diff --git a/index.html b/index.html
+index ec50c1f..c04df6f 100644
+--- a/index.html
++++ b/index.html
+@@ -11,8 +11,8 @@
+   <!-- Simple consistent top nav for all pages -->
+   <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+     <a href="./" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+-    <a href="https://oc2coos-2.polsia.app/store" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
+-    <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
++    <a href="store/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
++    <a href="arcade/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
+     <a href="#projects" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Projects</a>
+     <a href="#connect" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Connect</a>
+   </nav>
+@@ -80,7 +80,7 @@
+   <!-- PARKED BUTTONS + explicit SellThis to store/ -->
+   <section class="container" style="text-align:center; margin: 40px 0 60px;">
+     <div class="parked-row">
+-      <a href="https://oc2coos-2.polsia.app/store" class="parked-btn" style="text-decoration:none; display:inline-block;">SellThis — Store / Request Access →</a>
++      <a href="store/" class="parked-btn" style="text-decoration:none; display:inline-block;">SellThis — Store / Request Access →</a>
+       <button class="parked-btn" type="button">Enter Studio <span class="tag">Coming soon</span></button>
+       <button class="parked-btn" type="button">View Projects <span class="tag">Coming soon</span></button>
+       <button class="parked-btn" type="button">Contact / Work With Us <span class="tag">Parked</span></button>
+@@ -93,7 +93,7 @@
+   <footer class="footer">
+     <div class="brand">Oc2cO</div>
+     <div>Signal from chaos.</div>
+-    <div>Live on oc2co.com (GitHub Pages)</div>
++    <div>Live on www.oc2co.com (GitHub Pages)</div>
+   </footer>
+ 
+   <script src="script.js"></script>
+diff --git a/store-backend.js b/store-backend.js
+index 5129885..dbe8c3f 100644
+--- a/store-backend.js
++++ b/store-backend.js
+@@ -1,6 +1,6 @@
+ // store-backend.js
+-// Polsia Backend — Stripe Store V2 (matches your spec exactly)
+-// Drop these routes into your Polsia backend (or bbwaas_mcp/server.js)
++// Oc2cO Backend — Stripe Store V2 (matches spec)
++// Drop these routes into deploy backend (bbwaas_mcp/server.js or other) . Polsia was legacy. Canonical domain: www.oc2co.com
+ //
+ // OBJECTIVE (per your pasted spec):
+ // - Stripe = payment processor only
+@@ -12,16 +12,16 @@
+ // DEPENDENCIES (in your Polsia package.json):
+ //   npm install express stripe @neondatabase/serverless dotenv
+ //
+-// ENV VARS (Polsia env ONLY — never in code or chat):
++// ENV VARS (deploy env ONLY — never in code or chat):
+ //   STRIPE_SECRET_KEY
+ //   STRIPE_WEBHOOK_SECRET
+-//   SITE_URL=https://oc2coos-2.polsia.app
+-//   STORE_SUCCESS_URL=https://oc2coos-2.polsia.app/store/success
+-//   STORE_CANCEL_URL=https://oc2coos-2.polsia.app/store/cancel
++//   SITE_URL=https://www.oc2co.com
++//   STORE_SUCCESS_URL=https://www.oc2co.com/success
++//   STORE_CANCEL_URL=https://www.oc2co.com/cancel
+ //   DATABASE_URL or NEON_DATABASE_URL (for Neon)
+ //
+ // WEBHOOK URL TO PASTE IN STRIPE (after deploying this):
+-//   https://oc2coos-2.polsia.app/api/stripe/webhook
++//   https://www.oc2co.com/api/stripe/webhook
+ //
+ // This is the recommended path based on the spec you pasted.
+ // Once task #2874896 runs or you deploy, confirm the exact mounted path.
+@@ -30,8 +30,8 @@ require('dotenv').config();
+ const express = require('express');
+ const { neon } = require('@neondatabase/serverless'); // Neon serverless client (recommended for Polsia)
+ 
+-// === POLSIA WORKAROUND: Hardcoded secrets (no env panel exposed) ===
+-// IMPORTANT: Since Polsia currently has no visible place to set env vars for this site:
++// === DEPLOY WORKAROUND: Hardcoded secrets (no env panel exposed) ===
++// IMPORTANT: Set via env in your deploy host:
+ //
+ // 1. Go to your Stripe test dashboard and get:
+ //    - Secret key: sk_test_...
+@@ -286,8 +286,8 @@ router.post('/api/store/checkout', async (req, res) => {
+       mode: 'payment', // or 'subscription' if some products are subs
+       line_items,
+       customer_email,
+-      success_url: process.env.STORE_SUCCESS_URL || `${process.env.SITE_URL || 'https://oc2coos-2.polsia.app'}/store/success?session_id={CHECKOUT_SESSION_ID}`,
+-      cancel_url: process.env.STORE_CANCEL_URL || `${process.env.SITE_URL || 'https://oc2coos-2.polsia.app'}/store/cancel`,
++      success_url: process.env.STORE_SUCCESS_URL || `${process.env.SITE_URL || 'https://www.oc2co.com'}/success?session_id={CHECKOUT_SESSION_ID}`,
++      cancel_url: process.env.STORE_CANCEL_URL || `${process.env.SITE_URL || 'https://www.oc2co.com'}/cancel`,
+       metadata: {
+         source: 'oc2co_store_v2',
+         product_identifier: identifier || 'cart',
+@@ -507,7 +507,7 @@ router.get('/api/store/health', (req, res) => {
+     ok: true,
+     stripe: !!stripe,
+     neon: !!sql,
+-    webhook_url: 'https://oc2coos-2.polsia.app/api/stripe/webhook',
++    webhook_url: 'https://www.oc2co.com/api/stripe/webhook',
+     note: 'Central Oc2C0 payment hub. Use /api/store/checkout for checkout. Apps use /api/account/entitlements'
+   });
+ });
+diff --git a/store/index.html b/store/index.html
+index 4a29500..f035efe 100644
+--- a/store/index.html
++++ b/store/index.html
+@@ -8,9 +8,9 @@
+ </head>
+ <body>
+   <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+-    <a href="https://www.oc2co.com" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+-    <a href="https://oc2coos-2.polsia.app/store" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Store</a>
+-    <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
++    <a href="../" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
++    <a href="../store/" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Store</a>
++    <a href="../arcade/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
+     <a href="https://www.oc2co.com#projects" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Projects</a>
+     <a href="https://www.oc2co.com#connect" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Connect</a>
+   </nav>
+@@ -23,7 +23,7 @@
+       <div class="store-card" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;">
+         <h3>Oc2cO General Order / Test Checkout</h3>
+         <p class="status" style="font-size:0.85rem;color:var(--text-dim);margin-top:12px;">Checkout route prepared / not fully connected yet</p>
+-        <a href="https://oc2coos-2.polsia.app/store/checkout" class="btn" style="display:inline-block;margin-top:16px;padding:10px 24px;background:var(--grad-cyan);color:#05070f;border-radius:999px;text-decoration:none;font-weight:600;">Checkout preview</a>
++        <a href="../checkout/" class="btn" style="display:inline-block;margin-top:16px;padding:10px 24px;background:var(--grad-cyan);color:#05070f;border-radius:999px;text-decoration:none;font-weight:600;">Checkout preview</a>
+       </div>
+ 
+       <div class="store-card" style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;">
+diff --git a/success/index.html b/success/index.html
+index c0005c0..c425144 100644
+--- a/success/index.html
++++ b/success/index.html
+@@ -8,17 +8,17 @@
+ </head>
+ <body>
+   <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+-    <a href="https://www.oc2co.com" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+-    <a href="https://oc2coos-2.polsia.app/store" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
+-    <a href="https://oc2coos-2.polsia.app/arcade" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
++    <a href="../" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
++    <a href="../store/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
++    <a href="../arcade/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
+   </nav>
+ 
+   <div style="max-width:640px;margin:80px auto;padding:0 20px;text-align:center;">
+     <h1>Thank you</h1>
+     <p style="margin:24px 0;color:var(--text-dim);">This success route is prepared for future checkout redirects. If you reached this page after a real checkout, check your email or receipt provider for confirmation.</p>
+     <p>
+-      <a href="https://oc2coos-2.polsia.app/store" style="display:inline-block;padding:12px 28px;background:var(--grad-cyan);color:#05070f;border-radius:999px;text-decoration:none;font-weight:600;">Back to Store</a>
+-      <a href="https://www.oc2co.com" style="margin-left:12px;display:inline-block;padding:12px 28px;border:1px solid var(--border);border-radius:999px;text-decoration:none;">Home</a>
++      <a href="../store/" style="display:inline-block;padding:12px 28px;background:var(--grad-cyan);color:#05070f;border-radius:999px;text-decoration:none;font-weight:600;">Back to Store</a>
++      <a href="../" style="margin-left:12px;display:inline-block;padding:12px 28px;border:1px solid var(--border);border-radius:999px;text-decoration:none;">Home</a>
+     </p>
+   </div>
+ 

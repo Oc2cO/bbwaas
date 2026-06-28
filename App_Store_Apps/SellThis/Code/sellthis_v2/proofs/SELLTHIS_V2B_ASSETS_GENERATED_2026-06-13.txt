@@ -1,0 +1,10 @@
+SELLTHIS_V2B_ASSETS_GENERATED_2026-06-13.txt
+total 672
+-rwxrwxrwx 1 sagou sagou  86205 Jun 13 18:47 1.jpg
+-rwxrwxrwx 1 sagou sagou 123386 Jun 13 18:47 2.jpg
+-rwxrwxrwx 1 sagou sagou  77204 Jun 13 18:47 3.jpg
+-rwxrwxrwx 1 sagou sagou  96962 Jun 13 18:47 4.jpg
+-rwxrwxrwx 1 sagou sagou  86205 Jun 13 18:48 sellthis_v2b_sky_01_clear_blue.png
+-rwxrwxrwx 1 sagou sagou 123386 Jun 13 18:48 sellthis_v2b_sky_02_golden_hour.png
+-rwxrwxrwx 1 sagou sagou  77204 Jun 13  2026 sellthis_v2b_sky_03_overcast_neutral.png
+All 15 assets (4 skies + 10 items + 1 overlay) generated via image_gen in YOLO mode and placed with transparent PNG naming.

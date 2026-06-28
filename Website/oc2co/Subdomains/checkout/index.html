@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — Oc2cO</title>
+  <link rel="stylesheet" href="../../Source/oc2co_website/style.css">
+  <style>
+    .checkout-bg-layer { position:fixed; inset:0; z-index:0; pointer-events:none; background:linear-gradient(135deg,#05080f,#0b1424); }
+    .checkout-card-layer { position:relative; z-index:10; max-width:520px; margin:40px auto; padding:32px; background:var(--glass); border:1px solid var(--border); border-radius:16px; }
+    .checkout-button-style { display:block; width:100%; max-width:420px; margin:20px auto; background:var(--grad-cyan); color:#05070f; font-weight:600; border:none; padding:16px 28px; border-radius:999px; font-size:1rem; text-align:center; text-decoration:none; }
+    .checkout-footer-layer { position:relative; z-index:10; text-align:center; padding:40px 20px; color:var(--text-dim); font-size:0.8rem; }
+  </style>
+</head>
+<body>
+  <div class="checkout-bg-layer"></div>
+
+  <nav class="site-nav" style="position:sticky;top:0;background:rgba(5,7,15,0.95);padding:12px 20px;text-align:center;border-bottom:1px solid var(--border);z-index:1000;font-size:0.9rem;">
+    <a href="../" style="color:var(--cyan);margin:0 12px;text-decoration:none;font-weight:600;">Home</a>
+    <a href="../store/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Store</a>
+    <a href="../arcade/" style="color:var(--text-dim);margin:0 12px;text-decoration:none;">Arcade</a>
+  </nav>
+
+  <a href="../" style="position:relative;z-index:10;display:inline-block;margin:20px;padding:8px 16px;background:var(--surface2);border:1px solid var(--border);border-radius:999px;color:var(--cyan);font-size:0.85rem;text-decoration:none;font-weight:600;">← Home (Oc2cO)</a>
+
+  <header class="checkout-header" style="text-align:center;padding:48px 20px 24px;">
+    <div class="logo">Oc2cO</div>
+    <h1>Checkout</h1>
+    <p>Secure checkout route prepared. Payment connection not finalized on this static page.</p>
+  </header>
+
+  <div class="checkout-card-layer">
+    <h2 style="text-align:center;margin-bottom:16px;">General Order</h2>
+    <p style="text-align:center;color:var(--text-dim);">This is a static placeholder.</p>
+    <a href="#" class="checkout-button-style">Secure Checkout — Not Connected Yet</a>
+  </div>
+
+  <div class="checkout-footer-layer">
+    <p>Oc2cO • Secure • Private • Intentional</p>
+    <p style="margin-top:8px;"><a href="../store/">Back to Store</a> • <a href="../">Home</a></p>
+  </div>
+</body>
+</html>

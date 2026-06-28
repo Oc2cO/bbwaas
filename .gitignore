@@ -1,0 +1,89 @@
+# === ARCHIVES (stale, don't need in git) ===
+STALE_BBWAAS/
+00_MASTER_WORK_GATHER/
+
+# === CREDENTIALS & SECRETS ===
+.env
+.env.*
+*.key
+*.pem
+credentials/
+secrets/
+auth.json
+token*.txt
+
+# === LARGE BINARY ASSETS (keep in local, not git) ===
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.mp3
+*.zip
+*.tar.gz
+*.tgz
+
+# === DEPENDENCIES ===
+**/node_modules/
+**/.venv/
+**/venv/
+**/__pycache__/
+*.pyc
+
+# === OS ===
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# === IDE ===
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === BACKUPS ===
+*_backup*
+*.backup
+*.bak
+
+# === LOCAL SYMLINKS (navigation shortcuts, break on clone) ===
+AGENT_WORKSPACE
+ARCHIVE_GATHERS
+COMMAND_CENTER
+CONSOLIDATION_REPORTS
+EVOLUTION
+HOSTED_WORKSPACE
+MCP_SERVER
+PROJECT_OC2CO_MCP
+PROJECT_OC2CO_SIDECAR
+SIDECAR_PANEL
+STATIC_PROOF
+TOOL_SANDBOXES
+USER_ROOT_MCP
+Agent_Systems/Packets
+Agent_Systems/Reports
+Agent_Systems/Consolidation_History
+Other_Projects/Canva_Exports
+Other_Projects/Email_Intake
+Other_Projects/Iris_Oracle
+Other_Projects/Learnings
+Other_Projects/Mattermost_Poc
+Other_Projects/Mogo_Card_Journal_Mvp
+Other_Projects/Ops_Machine
+Other_Projects/Polymarket
+Other_Projects/Soulprint_Rebuild_Template
+Other_Projects/Tool_Sandboxes
+Other_Projects/Tools
+Other_Projects/Tunnel_Client
+Other_Projects/Visual_Intake
+Other_Projects/bbwaas-static-proof
+Other_Projects/command_center
+# === NESTED GIT REPOS ===
+Website/oc2co/Source/oc2co_website/
+# Website/oc2co/Images/, Documents/, Subdomains/, Canva_Exports/, Assets/ are NOT excluded
+
+# === AGENT CACHES ===
+.grok/
+.openhands*/
+.claude/
+.mcp*.json
